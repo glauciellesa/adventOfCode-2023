@@ -1,5 +1,6 @@
-const fs = require('node:fs');
-const str = fs.readFileSync('./day1.txt', 'utf8');
+import { readFileSync } from "fs";
+const str = readFileSync(new URL("./day1.txt", import.meta.url), { encoding: "utf8" });
+console.log(str);
 
 const partOne = (str) => {
   const arrayOfValues = str.trim().split('\n')

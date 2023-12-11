@@ -1,5 +1,7 @@
-const fs = require('node:fs');
-const str = fs.readFileSync('./logicPlinio1.txt', 'utf8');
+import { readFileSync } from "fs";
+const str = readFileSync(new URL("./day1.txt", import.meta.url), { encoding: "utf8" });
+console.log(str);
+
 
 //const str = 'two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen';
 
